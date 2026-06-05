@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alianza Rebelde</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/StarWarsResistanceEmblem.webp" type="image/x-icon">
+</head>
+<body class="cargando">
+    <header>
+        <nav>
+            <button class="navButton" id="navButton1">
+                <img src="img/hangar.webp" alt="hangar" id="imagencabeza">
+                Hangar
+            </button>
+            <button class="navButton" id="navButton2">
+                <img src="img/cabezaConCasco.webp" alt="pilotos" id="imagencabeza">
+                Registro de Pilotos
+            </button>
+            <button class="navButton" id="navButton3">
+                <img src="img/misiones.webp" alt="misiones" id="imagencabeza">
+                Tablero de Misiones
+            </button>
+            <button class="navButton" id="navButton4">
+                <img src="img/dashboard.webp" alt="dashboard" id="imagencabeza">
+                DashBoard
+            </button>
+        </nav>
+    </header>
+    
+    <br>
+    
+    <div id ="Seccion1">
+        <h1>Hangar de Naves</h1>
+
+        <input type="text" id="buscador" placeholder="Buscar nave...">
+
+        <label for="filtroTipo">Filter by:</label>
+        <select id="filtroTipo">
+            <option value="Todos">Todos</option>
+        </select>
+
+        <button id="ordenar">Ordenar por velocidad</button>
+
+        <p id="contador"></p>
+
+        <div id="contenedorNaves"></div>
+    </div>
+
+    <br>
+    <div id="Seccion2">
+        <h1>Registro de pilotos</h1>
+
+        <form id="formPiloto">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+
+            <input type="text" id="rango" placeholder="Rango" required>
+
+            <select id="nave" required>
+                <option value="">Selecciona nave</option>
+            </select>
+
+            <input type="number" id="victorias" placeholder="Victorias" min="0" required>
+
+            <select id="estado" required>
+                <option value="">Estado</option>
+                <option value="activo">Activo</option>
+                <option value="herido">Herido</option>
+                <option value="KIA">KIA</option>
+            </select>
+
+            <button type="submit">Guardar piloto</button>
+        </form>
+    
+        <table>
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Rango</th>
+                <th>Nave</th>
+                <th>Victorias</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="listaPilotos"></tbody>
+        </table>
+    </div>
+    <br>
+
+<div id="Seccion3">
+
+    <h1>Tablero de misiones</h1>
+
+    <input type="text" id="nombreMision" placeholder="Nombre en clave de mision">
+    <input type="text" id="descripcionMision" placeholder="Breve descripcion de la mision">
+
+    <select id="selectPiloto"></select>
+    <select id="selectDificultad"></select>
+
+    <button id="btnAñadirMision">Añadir misión</button>
+
+    <br><br>
+
+    <select id="filtroDificultad"></select>
+
+    <br><br>
+
+    <div id="kanban">
+        <div>
+            <h2>To Do</h2>
+            <div class="columna" data-estado="todo"></div>
+        </div>
+
+        <div>
+            <h2>In Progress</h2>
+            <div class="columna" data-estado="in_progress"></div>
+        </div>
+
+        <div>
+            <h2>Done</h2>
+            <div class="columna" data-estado="done"></div>
+        </div>
+    </div>
+
+</div>
+
+    <br>
+
+    <div id="Seccion4">
+        <h1>Mando de la Alianza</h1>
+
+        <p id="totalNaves"></p>
+        <p id="estadoNaves"></p>
+
+        <p id="totalPilotos"></p>
+        <p id="estadoPilotos"></p>
+
+        <p id="totalMisiones"></p>
+
+        <p id="mejorPiloto"></p>
+        <p id="naveRapida"></p>
+
+        <h3>Progreso de misiones</h3>
+        <div id="barraContenedor">
+            <div id="barraProgreso"></div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-text">
+                <p>© Disney. Star Wars and all related characters are trademarks of Lucasfilm Ltd.</p>
+                <p>Que la Fuerza te acompañe</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/starwars/?hl=es%2F" target="_blank">
+                    <img src="img/Instagram.webp" alt="Instagram">
+                </a>
+
+                <a href="https://x.com/StarWarsSpain" target="_blank">
+                    <img src="img/x.webp" alt="X">
+                </a>
+
+                <a href="https://www.facebook.com/starwars.es/?brand_redir=169299103121699" target="_blank">
+                    <img src="img/Facebook.webp" alt="Facebook">
+
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

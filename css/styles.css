@@ -1,0 +1,256 @@
+#imagencabeza{
+    border-radius: 15%;
+    width: 25px;
+    height: 25px;
+}
+
+/*fondo general estilo espacio*/
+body {
+    background-color: black;
+    background-image: url(../img/fondo.webp);
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /*para poner el fondo oscurecido*/
+    z-index: -1;
+}
+
+/*titulos estilo star wars*/
+h1, h2, h3 {
+    color: #ffe81f;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(to right, #000, #111, #000);
+    border-bottom: 2px solid #7f7f1d;
+    flex-wrap: wrap;
+}
+
+.navButton{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #8d771f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.navButton:hover{
+    background: #d4c326;
+}
+
+/*inputs y selects*/
+input, select, button {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ffe81f;
+    background-color: black;
+    color: #ffe81f;
+}
+
+/*botones estilo neón*/
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ffe81f;
+    color: black;
+    box-shadow: 0 0 10px #ffe81f;
+}
+
+/*contenedor de naves*/
+#contenedorNaves {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*cards*/
+.card {
+    background-color: #111;
+    border: 1px solid #ffe81f;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffe81f;
+}
+
+/*invisible para filtros*/
+.invisible {
+    display: none;
+}
+
+/*tabla pilotos*/
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th{
+    color: #ffe81f;
+}
+
+th, td {
+    border: 1px solid #ffe81f;
+    padding: 10px;
+    text-align: center;
+}
+
+/*kanban*/
+.columna {
+    min-height: 150px;
+    border: 1px solid #ffe81f;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*dashboard*/
+#Seccion4 {
+    text-align: center;
+}
+
+/*barra progreso*/
+#barraContenedor {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #696969;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#barraProgreso {
+    height: 25px;
+    width: 0%;
+    background: linear-gradient(to right, rgb(174, 87, 15), rgb(245, 242, 58));
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    transition: width 0.5s;
+}
+
+/*separacion secciones*/
+#Seccion1, #Seccion2, #Seccion3, #Seccion4 {
+    padding: 20px;
+    border-bottom: 1px solid #ffe81f;
+}
+
+#kanban {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/*cada columna*/
+#kanban > div {
+    
+    flex: 1;
+    background-color: #111;
+    border: 1px solid #ffe81f;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+/*titulo de cada columna*/
+#kanban h2 {
+    text-align: center;
+    border-bottom: 1px solid #ffe81f;
+    padding-bottom: 5px;
+}
+
+/*tarjetas*/
+.columna .card {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    background: #111;
+    border-top: 2px solid #7f7a1d;
+    padding: 20px;
+    margin-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* texto */
+.footer-text p{
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* redes */
+.footer-social{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-social img{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.footer-social img:hover{
+    transform: scale(1.1);
+}
+
+/* footer responsive */
+@media (max-width: 600px){
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
